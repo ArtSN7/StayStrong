@@ -41,14 +41,17 @@ Do not provide explanations or any other text—strictly return '1' or '0'
         });
 
         const lastLetter = response.message.content.slice(-1);
-        console.log(lastLetter);
+        
+        if (lastLetter === '1'){
+          return false
+        }else{
+          return true
+        }
 
     } catch (error) {
         console.error('Error:', error);
     }
 
-  // check if the data is valid
-  return true;
 }
 
 
