@@ -1,0 +1,10 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333EA" />
+      <stop offset="100%" stopColor="#EC4899" />
+    </linearGradient>
+  </defs>
+  <path d="M35 25C22.2975 25 12 35.2975 12 48C12 55.4325 15.6125 62.0875 21.25 66.1625C17.9875 70.9 16 76.6025 16 82.75V87H31V82.75C31 74.0125 38.2625 66.75 47 66.75H52C64.7025 66.75 75 56.4525 75 43.75C75 31.0475 64.7025 20.75 52 20.75H47C44.0875 20.75 41.325 21.3125 38.775 22.325C37.6125 22.7375 36.4875 23.2375 35.4125 23.8125" stroke="url(#logo-gradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M65 75C77.7025 75 88 64.7025 88 52C88 44.5675 84.3875 37.9125 78.75 33.8375C82.0125 29.1 84 23.3975 84 17.25V13H69V17.25C69 25.9875 61.7375 33.25 53 33.25H48C35.2975 33.25 25 43.5475 25 56.25C25 68.9525 35.2975 79.25 48 79.25H53C55.9125 79.25 58.675 78.6875 61.225 77.675C62.3875 77.2625 63.5125 76.7625 64.5875 76.1875" stroke="url(#logo-gradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
