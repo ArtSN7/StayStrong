@@ -16,3 +16,6 @@ app.use('/send', sendMessageRoutes); // root for main page
 
 const PORT = 5001;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
+
+// to run AI agent: ollama run deepseek-r1:1.5b
