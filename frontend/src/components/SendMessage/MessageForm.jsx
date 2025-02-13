@@ -3,20 +3,37 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowLeft, Send } from "lucide-react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+
+// context
+import { AppContext } from "../../context/AppContext"
+import { useContext } from "react"
 
 export default function MessageForm() {
   const [message, setMessage] = useState("")
   const [author, setAuthor] = useState("")
+  const { messageText, setMessageText, messageUsername, setMessageUsername } = useContext(AppContext)
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically send the data to your backend
-    console.log("Submitted:", { message, author })
+
+    // set the message and the author to the context
+    setMessageText(message)
+
+    if (author === ""){
+      setAuthor("Anonymous")
+    }
+
+    setMessageUsername(author)
+
     // Reset form
     setMessage("")
     setAuthor("")
-    // You could also add a success message or redirect here
+
+    // redirect to the checking page
+    navigate("/checkingMessage")
   }
 
   return (
@@ -74,6 +91,7 @@ export default function MessageForm() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
+              onClick={handleSubmit}
               className="w-full py-2 px-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-md shadow-md hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75 transition-colors duration-300"
             >
               <span className="flex items-center justify-center">
