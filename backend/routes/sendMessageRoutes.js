@@ -11,14 +11,24 @@ const router = express.Router();
 // Then I check it using AI
 // If it is valid, I send a response back to the client
 // If it is not valid, I send an error message back to the client
-router.post('/form', (req, res) => {
+router.post('/form', async (req, res) => {
   const { message, author } = req.body;
 
-  if (!IsDataValid(message)) {
-    return res.status(400).json({ message: "Message is not valid" });
-  }
+  try {
+    const AIdes = await IsDataValid(message);
 
-  return res.status(200).json({ message: "Message received successfully" });
+    console.log(AIdes);
+
+    if (AIdes) {
+      return res.status(200).json({ value: true });
+    }else{
+      return res.status(200).json({ value: false });
+    }
+
+  } catch (error) {
+    console.error("Error validating message:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
 });
 
 async function IsDataValid(data){
@@ -26,12 +36,12 @@ async function IsDataValid(data){
     const promt = `You are an AI content moderation system for a well-being website. Your task is to analyze user-submitted messages and determine if they contain offensive content.
 
 Guidelines:
-Offensive content includes hate speech, threats, harassment, explicit language, or personal attacks.
+Offensive message is considered to be anything related to death, hate, racism, LGBTQ+, sexual harrasment or can hurt feelings of anybody
 Messages that are kind, supportive, neutral, or positive (e.g., 'I love you', 'Have a great day') are not offensive.
 Response format:
 Return only '1' if the message is offensive and should be blocked.
 Return only '0' if the message is safe and can be posted.
-Do not provide explanations or any other text—strictly return '1' or '0'
+Do not provide explanations or any other text—strictly return '0' or '1'
     Here is the message: ${data}`
 
     try {
@@ -42,10 +52,10 @@ Do not provide explanations or any other text—strictly return '1' or '0'
 
         const lastLetter = response.message.content.slice(-1);
         
-        if (lastLetter === '1'){
-          return false
+        if (lastLetter === '0'){
+          return true;
         }else{
-          return true
+          return false;
         }
 
     } catch (error) {

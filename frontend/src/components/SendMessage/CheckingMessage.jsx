@@ -16,7 +16,6 @@ export default function MessageCheck() {
         if (prevProgress >= 100) {
           clearInterval(timer)
           CheckData();
-          navigate("/");
         }
         return prevProgress + 1
       })
@@ -31,9 +30,9 @@ export default function MessageCheck() {
     try{
       const response = await axios.post("http://localhost:5001/send/form", { message: messageText, author: messageUsername })
 
-      if (response.status === 200) { // if it is valid
+      if (response.data.value === true) { // if it is valid
         navigate("/messageAccepted");
-      }else if (response.status === 400) { // if it is not valid
+      }else { // if it is not valid
         navigate("/messageRejected");
       }
 
