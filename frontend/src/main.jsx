@@ -16,7 +16,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import CheckingMessage from './components/SendMessage/CheckingMessage.jsx'
 import MessageAccepted from './components/SendMessage/MessageAccepted.jsx'
 import MessageRejected from './components/SendMessage/MessageRejected.jsx'
-import RandomSpeechDisplay from './components/RandomSpeechDisplay/RandomSpeechDisplay.jsx'
+import RandomSpeechDisplay from './components/SpDisplay/RandomSpeechDisplay.jsx'
 import ChatDisplay from './components/ChatDisplay/ChatDisplay.jsx'
 
 // main

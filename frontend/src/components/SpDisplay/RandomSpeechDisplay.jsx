@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { RefreshCw, Quote } from "lucide-react"
-import Link from "next/link"
+import { Link } from "react-router-dom"
 
 // Simulated API call (replace this with your actual API call)
 const fetchRandomSpeech = async () => {
@@ -14,7 +14,7 @@ const fetchRandomSpeech = async () => {
   }
 }
 
-export default function RandomSpeech() {
+export default function RandomSpeechDisplay() {
   const [speech, setSpeech] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -61,7 +61,7 @@ export default function RandomSpeech() {
         )}
 
         <div className="mt-8 flex justify-between items-center">
-          <Link href="/">
+          <Link to="/">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

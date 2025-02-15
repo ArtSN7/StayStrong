@@ -1,6 +1,6 @@
 // Handles the navigation bar and logo display.
 
-import { Sun, Moon, MessageSquare, Plus } from "lucide-react"
+import { Sun, Moon, MessageSquare, Plus, Quote } from "lucide-react"
 import { motion } from "framer-motion"
 import { ThemeContext } from "../../context/ThemeContext"
 import { useContext } from "react"
@@ -10,6 +10,8 @@ function Header() {
 
   const { theme, toggleTheme } = useContext(ThemeContext);
 
+  const navigate = useNavigate();
+
   const ChangeTheme = () => {
 
     toggleTheme();
@@ -18,14 +20,12 @@ function Header() {
 
   const NavigateToChatDisplay = () => {
 
-    const navigate = useNavigate();
     navigate("/chatDisplay")
   
   }
 
   const NavigateToRandomSpeechDisplay = () => {
-
-    const navigate = useNavigate();
+    
     navigate("/randomSpeechDisplay")
   
   }
