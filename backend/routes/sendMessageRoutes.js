@@ -3,6 +3,7 @@
 const { default: ollama } = require('ollama'); // CJS
 
 const express = require('express');
+const Speech = require('../models/speeches');
 
 const router = express.Router();
 
@@ -20,6 +21,7 @@ router.post('/form', async (req, res) => {
     console.log(AIdes);
 
     if (AIdes) {
+      const newSpeech = await Speech.create({ content: message, author });
       return res.status(200).json({ value: true });
     }else{
       return res.status(200).json({ value: false });

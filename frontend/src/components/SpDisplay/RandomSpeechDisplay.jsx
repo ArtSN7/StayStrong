@@ -2,15 +2,15 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { RefreshCw, Quote } from "lucide-react"
 import { Link } from "react-router-dom"
+import axios from "axios"
 
 // Simulated API call (replace this with your actual API call)
 const fetchRandomSpeech = async () => {
-  // Simulating an API call with a delay
-  await new Promise((resolve) => setTimeout(resolve, 1000))
-  return {
-    content:
-      "Believe you can and you're halfway there. Your attitude, not your aptitude, will determine your altitude. Success is not final, failure is not fatal: it is the courage to continue that counts.",
-    author: "Theodore Roosevelt",
+  try {
+    const response = await axios.get("http://localhost:5001/speech/generate");
+    return response.data;
+  } catch (error) {
+    console.log(error);
   }
 }
 
