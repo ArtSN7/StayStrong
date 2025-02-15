@@ -4,6 +4,7 @@ const sequelize = require('./models/index');
 
 const sendMessageRoutes = require('./routes/sendMessageRoutes');
 const RandomSpeechDisplayRoutes = require('./routes/RandomSpeechDisplayRoutes');
+const ChatDisplayRoutes = require('./routes/ChatDisplayRoutes');
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // This should be before your routes
 app.use('/send', sendMessageRoutes); // root for main page
 app.use("/speech", RandomSpeechDisplayRoutes);
+app.use("/chat", ChatDisplayRoutes)
 
 
 sequelize.sync({ force: false }).then(() => {

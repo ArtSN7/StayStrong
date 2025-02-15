@@ -67,7 +67,4 @@ Do not provide explanations or any other text—strictly return '0' or '1'
 }
 
 
-
-
-
 module.exports = router;
