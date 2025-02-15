@@ -16,10 +16,17 @@ function Header() {
 
   }
 
-  const NavigateToMessagesDisplay = () => {
+  const NavigateToChatDisplay = () => {
 
     const navigate = useNavigate();
-    navigate("/messagesDisplay")
+    navigate("/chatDisplay")
+  
+  }
+
+  const NavigateToRandomSpeechDisplay = () => {
+
+    const navigate = useNavigate();
+    navigate("/randomSpeechDisplay")
   
   }
 
@@ -37,7 +44,15 @@ function Header() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={NavigateToMessagesDisplay}
+              onClick={NavigateToRandomSpeechDisplay}
+              className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            >
+              <Quote size={24} />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={NavigateToChatDisplay}
               className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
             >
               <MessageSquare size={24} />

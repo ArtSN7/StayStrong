@@ -16,7 +16,8 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import CheckingMessage from './components/SendMessage/CheckingMessage.jsx'
 import MessageAccepted from './components/SendMessage/MessageAccepted.jsx'
 import MessageRejected from './components/SendMessage/MessageRejected.jsx'
-
+import RandomSpeechDisplay from './components/RandomSpeechDisplay/RandomSpeechDisplay.jsx'
+import ChatDisplay from './components/ChatDisplay/ChatDisplay.jsx'
 
 // main
 createRoot(document.getElementById('root')).render(
@@ -26,10 +27,11 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<StartingPage />} /> {/* starting page */}
           <Route path="/messageForm" element={<MessageForm />} /> {/* message form to send */}
-          <Route path="/messagesDisplay" element={<MessageForm />} /> {/* messages to display */}
+          <Route path="/chatDisplay" element={<ChatDisplay />} /> {/* messages to display */}
           <Route path="/checkingMessage" element={<CheckingMessage />} /> {/* checking message */}
           <Route path="/messageAccepted" element={<MessageAccepted />} /> {/* message accepted */}
           <Route path="/messageRejected" element={<MessageRejected />} /> {/* message rejected */}
+          <Route path="/randomSpeechDisplay" element={<RandomSpeechDisplay />} /> {/* random speech display */}
           <Route path="*" element={<ErrorPage />} /> {/* error page */}
         </Routes>
       </Router>
