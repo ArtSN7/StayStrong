@@ -7,8 +7,6 @@ StayStrong is a supportive platform designed to provide users with emotional sup
 
 <img width="1480" alt="image" src="https://github.com/user-attachments/assets/117d002d-037f-4b24-a101-794f09481727" />
 
-<img width="1489" alt="image" src="https://github.com/user-attachments/assets/64e74398-87ff-4bd8-a938-3be3158ec5b3" />
-
 <img width="1487" alt="image" src="https://github.com/user-attachments/assets/22756be1-5fb0-412b-b847-0d319c7069b2" />
 
 <img width="1473" alt="image" src="https://github.com/user-attachments/assets/2c6e8d87-c908-439b-9d24-4ad15800d9ba" />
