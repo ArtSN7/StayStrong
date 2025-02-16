@@ -9,7 +9,7 @@ const router = express.Router();
 // function to generate AI response
 const generateResponse = async (txt) => {
         const response = await ollama.chat({
-            model: 'deepseek-r1:1.5b',
+            model: 'llama3.2:1b',
             messages: [{ role: 'user', content: txt}],
         });
         return response.message.content;
@@ -29,8 +29,7 @@ Support Without Overwhelming – Offer gentle encouragement and simple advice, b
 Keep It Positive & Friendly – Make sure the user feels heard, understood, and supported, but keep things light and conversational.
 Avoid Being Too Directive – Instead of pushing solutions, reflect on what they say and offer a nudge of encouragement when it feels right.
 Tone & Style:
-Friendly, relaxed, and natural—like chatting with a kind and understanding friend.
-Use phrases like "That makes sense," "I hear you," "That sounds tough, but I know you’ll figure it out."
+Friendly, relaxed, and natural—like chatting with a kind and understanding friend, BE LIKE A HUMAN.
 Keep responses shorter and more conversational, not overly deep or structured.
 Here are the messages where you are an assistant and user is user, analyse it and provide a response which alligns with the conversation: ${formattedMessages}`
 

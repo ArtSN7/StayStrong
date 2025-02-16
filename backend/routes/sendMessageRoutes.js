@@ -48,7 +48,7 @@ Do not provide explanations or any other text—strictly return '0' or '1'
 
     try {
         const response = await ollama.chat({
-          model: 'deepseek-r1:1.5b',
+          model: 'llama3.2:1b',
           messages: [{ role: 'user', content: promt}],
         });
 
