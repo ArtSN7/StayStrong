@@ -3,6 +3,25 @@
 ## Overview
 StayStrong is a supportive platform designed to provide users with emotional support and guidance through AI-driven interactions. The platform includes features such as message validation, random speech display, and chat interactions with an AI assistant named Serenity.
 
+<img width="1493" alt="image" src="https://github.com/user-attachments/assets/e9af59d9-eab8-4c5f-aa56-788eef6786c7" />
+
+<img width="1480" alt="image" src="https://github.com/user-attachments/assets/117d002d-037f-4b24-a101-794f09481727" />
+
+<img width="1489" alt="image" src="https://github.com/user-attachments/assets/64e74398-87ff-4bd8-a938-3be3158ec5b3" />
+
+<img width="1487" alt="image" src="https://github.com/user-attachments/assets/22756be1-5fb0-412b-b847-0d319c7069b2" />
+
+<img width="1473" alt="image" src="https://github.com/user-attachments/assets/2c6e8d87-c908-439b-9d24-4ad15800d9ba" />
+
+
+<img width="1444" alt="image" src="https://github.com/user-attachments/assets/84857238-cd0a-4bea-829c-02558bb61696" />
+
+
+<img width="1482" alt="image" src="https://github.com/user-attachments/assets/84728a20-1d7e-4619-ae54-1d7da3240ee2" />
+
+<img width="1478" alt="image" src="https://github.com/user-attachments/assets/c862cb6b-5e86-492b-8626-04b6a4a2da8c" />
+
+
 ## Features
 - **Message Validation**: Checks user-submitted messages for offensive content and provides feedback.
 - **Random Speech Display**: Retrieves and displays random supportive messages from a database.
@@ -89,6 +108,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 This project is licensed under the MIT License.
-
-## Contact
-For any inquiries or support, please contact [Your Name] at [your-email@example.com].
